@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+
+	<body>
+		<header>
+			<div>
+				<p>time</p>
+				<p class="clock">
+					00:00:00
+				</p>
+			</div>
+			<div class>
+				<p>your score</p>
+				<p class="score">0 </p>
+			</div>
+		</header>
+		<main>
+			
+			<p class="welcome-msg">Get quick at adding and subtracting </br> <span>Press start to begin</span></p>
+			<div class="game">
+				<p class="q-number">Question #</p>
+				<h1 class="question">? ? ?</h1>
+				<input
+					type="number"
+					name="answer"
+					id="answer"
+					placeholder="your answer"
+					disabled
+				/>
+				<p>press enter to submit</p>
+			</div>
+			<div class="buttons">
+				<button class="start">start game</button>
+				<button class="end" disabled>end game</button>
+			</div>
+			<div class="results"></div>
+		</main>	
+	</body>
+</html>	

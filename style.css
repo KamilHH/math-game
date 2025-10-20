@@ -1,0 +1,83 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-size: 20px;
+	text-align: center;
+	height: 100vh;
+	font: 16px/1.5 "Roboto", sans-serif;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 25px;
+}
+header div p:first-of-type {
+	font-weight: 600;
+}
+main {
+	margin-top: 50px;
+}
+main > div {
+	margin-top:30px
+}
+input {
+	font-size: 24px;
+	text-align: center;
+	border: none;
+	outline: none;
+	margin: 10px 0;
+	padding: 10px 0;
+	box-shadow: 0 0 2px #b13b1a;
+	transition: box-shadow 500ms ease;
+}
+input:focus {
+	box-shadow: 0 0 5px #b13b1a;
+}
+button {
+	border: none;
+	color: white;
+	border-radius: 10%;
+	padding: 10px 20px;
+	font: 16px/1.5 "Roboto", sans-serif;
+	text-transform: uppercase;
+	background: linear-gradient(45deg, #8f73a8, #8b6ba6, #b13b1a, #a0a66b);
+	background-size: 200% 200%;
+	margin-right: 5px;
+	transition: background-position 500ms ease;
+}
+button:hover {
+	background-position: right;
+}
+button:disabled {
+	background: #888;
+	color: #ccc;
+	cursor: not-allowed;
+	background-size: 100% 100%;
+}
+.game {
+	height: 0px;
+	overflow: hidden;
+	transition: height 500ms ease-in-out;
+}
+.game.on {
+	height: 200px;
+}
+table {
+	margin: 0 auto;
+}
+tr,
+th,
+td {
+	padding: 5px;
+}
+tr.wrong {
+	background-color: rgba(255, 0, 0, 0.205);
+}
+.results {
+	max-height: 300px;
+	overflow-y: scroll;
+}
+
