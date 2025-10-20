@@ -122,7 +122,7 @@ class Game {
 		
 		const input = document.querySelector("#answer");
 		input.value = "";
-		if (this.currentQuestion <= this.totalQuestions) {
+		if (this.currentQuestion < this.totalQuestions) {
 			this.askQuestion();
 		} else {
 			this.end()
