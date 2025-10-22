@@ -55,11 +55,11 @@ class Game {
 		const table = document.createElement("table");
 		const tableHeader = document.createElement("tr");
 		tableHeader.innerHTML =
-			"<th>Question</th><th>Your Answer</th><th>Correct</th>";
+			"<th>#</th><th>Question</th><th>Your Answer</th><th>Correct</th>";
 		table.appendChild(tableHeader);
-		this.answers.forEach((answer) => {
+		this.answers.forEach((answer, i) => {
 			const tr = document.createElement("tr");
-			tr.innerHTML = `<td>${answer.question}</td><td>${
+			tr.innerHTML = `<th>${i + 1}</th><td>${answer.question}</td><td>${
 				answer.playerAnswer
 			}</td><td>${answer.correct == true ? "✅" : "❌"}</td>`;
 			if (!answer.correct) {
