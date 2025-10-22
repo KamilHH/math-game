@@ -55,11 +55,11 @@ class Game {
 		const table = document.createElement("table");
 		const tableHeader = document.createElement("tr");
 		tableHeader.innerHTML =
-			"<th>Question</th><th>Your Answer</th><th>Correct</th>";
+			"<th>#</th><th>Question</th><th>Your Answer</th><th>Correct</th>";
 		table.appendChild(tableHeader);
-		this.answers.forEach((answer) => {
+		this.answers.forEach((answer, i) => {
 			const tr = document.createElement("tr");
-			tr.innerHTML = `<td>${answer.question}</td><td>${
+			tr.innerHTML = `<th>${i + 1}</th><td>${answer.question}</td><td>${
 				answer.playerAnswer
 			}</td><td>${answer.correct == true ? "✅" : "❌"}</td>`;
 			if (!answer.correct) {
@@ -75,14 +75,13 @@ class Game {
 		input.disabled = true;
 		this.gameActive = false;
 		this.time = 0;
-		this.totalQuestions = 0;
 		startButton.disabled = false;
 		endButton.disabled = true;
 		clearInterval(this.clockId);
 	}
 	askQuestion() {
 		document.querySelector("#answer").focus();
-		document.querySelector(".q-number").textContent = `Question #${this.currentQuestion}`;
+		document.querySelector(".q-number").textContent = `Question #${this.currentQuestion + 1}`;
 		const operators = ["+", "-"];
 		const a = Math.floor(Math.random() * (1000 - 1 + 1) + 1);
 		const b = Math.floor(Math.random() * (1000 - 1 + 1) + 1);
@@ -122,7 +121,7 @@ class Game {
 		
 		const input = document.querySelector("#answer");
 		input.value = "";
-		if (this.currentQuestion <= this.totalQuestions) {
+		if (this.currentQuestion < this.totalQuestions) {
 			this.askQuestion();
 		} else {
 			this.end()
