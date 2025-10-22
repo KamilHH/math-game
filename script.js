@@ -81,7 +81,7 @@ class Game {
 	}
 	askQuestion() {
 		document.querySelector("#answer").focus();
-		document.querySelector(".q-number").textContent = `Question #${this.currentQuestion}`;
+		document.querySelector(".q-number").textContent = `Question #${this.currentQuestion + 1}`;
 		const operators = ["+", "-"];
 		const a = Math.floor(Math.random() * (1000 - 1 + 1) + 1);
 		const b = Math.floor(Math.random() * (1000 - 1 + 1) + 1);
