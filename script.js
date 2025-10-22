@@ -75,7 +75,6 @@ class Game {
 		input.disabled = true;
 		this.gameActive = false;
 		this.time = 0;
-		this.totalQuestions = 0;
 		startButton.disabled = false;
 		endButton.disabled = true;
 		clearInterval(this.clockId);
